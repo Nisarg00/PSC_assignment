@@ -1,0 +1,9 @@
+{% extends "FUDIEE/base.html" %}
+{% block content %}
+        <h1>fudiee Home page</h1>
+
+        {% for x in this_location_restaurants %}
+           <h2>{{ x.Name }}</h2>
+           <p></p>
+        {% endfor %}
+{% endblock content %}
