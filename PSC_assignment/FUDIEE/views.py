@@ -26,11 +26,10 @@ def home(request):
     context = {
         'this_location_restaurants': this_location_restaurants
     }
-    return render(request,"FUDIEE/home.html",context)
+    return render(request,"home.html",context)
 
 def about(request):
-    return render(request,"FUDIEE/about.html",{'title':'about Fudiee'})
-
+    return render(request,"about.html",{'title':'about Fudiee'})
 
 def index(request):
     items = food_item.objects.all()
@@ -38,4 +37,4 @@ def index(request):
     print(settings.MEDIA_ROOT)
 
     types = ['Drinks','Pizzas']
-    return render(request,"FUDIEE/index.html",{'items': items,'types':types})
+    return render(request,"index.html",{'items': items,'types':types})

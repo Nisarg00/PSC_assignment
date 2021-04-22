@@ -1,11 +1,12 @@
+from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^about/', views.about, name="fudiee-about"),
-    url(r'', views.index, name="fudiee-home"),
+    path("register",views.register,name="registration"),
+    path("login",views.login, name="login"),
+    path("logout",views.logout,name="logout")
 ]
 
