@@ -1,5 +1,6 @@
 from  django.shortcuts import render
-from django.http import HttpResponse
+from .models import food_item
+from django.conf import settings
 
 # Create your views here.
 
@@ -32,4 +33,9 @@ def about(request):
 
 
 def index(request):
-    return render(request,"FUDIEE/index.html")
+    items = food_item.objects.all()
+    print(settings.BASE_DIR)
+    print(settings.MEDIA_ROOT)
+
+    types = ['Drinks','Pizzas']
+    return render(request,"FUDIEE/index.html",{'items': items,'types':types})
