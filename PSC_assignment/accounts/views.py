@@ -4,7 +4,6 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 
-
 def login(request):
     if request.method== 'POST':
         username = request.POST['username']
@@ -56,4 +55,5 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')   
+
     

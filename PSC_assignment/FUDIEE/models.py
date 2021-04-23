@@ -21,3 +21,4 @@ class featured_dishes(models.Model):
     description2 = models.TextField(blank=True,null=True)
     img2 = models.ImageField(upload_to ='FUDIEE/',blank=True,null=True)
     price2 = models.IntegerField(blank=True,null=True)
+
