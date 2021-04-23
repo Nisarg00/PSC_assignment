@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME'  : 'PSC_assignment',
         'USER'  : 'postgres',
-        'PASSWORD': 'Ellysium1',
+        'PASSWORD': 'Nisarg',
         'HOST': 'localhost'
     }
 }
